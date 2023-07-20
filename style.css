@@ -1,0 +1,165 @@
+/* style.css */
+
+/* Reset default margin dan padding */
+body, h1, h2, h3, p, ul, li, form, input, button, table {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /*Mengatur font dan latar belakang website */
+  body {
+    font-family:'Lucida Sans', Arial, sans-serif;
+    line-height: 1.6;
+    background-color:beige;
+  }
+  /*Mengatur elemen container*/
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .container p {
+    margin: 0 auto;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  /*Styling header "Kalkulator BMI"*/
+  h1 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  /*Styling Form kalkulator*/
+  form {
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 450px;
+    box-sizing: border-box;
+    background-color: #f2f2f2;
+    font-size: 15px;
+  }
+  /*Mengatur label input gender, age, height, weight*/
+  label {
+    display: block;
+    margin-bottom: 5px;
+  } 
+
+  .bold-label {
+    font-weight: bold;
+  }
+
+  /*Mengatur pengisian gender */
+  .gender-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .gender-container label {
+    margin-right: 10px;
+  }
+  
+  input[type="radio"].gender-radio {
+    margin: 0;
+    margin-right: 5px;
+  }
+
+  input[type="radio"].gender-radio {
+    margin-bottom: 5px;
+  }
+
+  /*Mengatur pengisian age, height, weight*/
+  input[type="number"] {
+    margin-bottom: 10px;
+    padding: 5px;
+    text-align: justify;
+  }
+  
+  /* Mengatur tampilan button Hitung BMI dan Reset*/ 
+  .button-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .button-container button {
+    margin-right: 10px;
+    padding: 10px 20px;
+    background-color: #5fb6f0;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Lucida Sans', sans-serif;
+    font-weight: bold;
+  }
+  
+  .button-container input[type="reset"] {
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Lucida Sans', sans-serif;
+    font-weight: bold;
+  }
+  
+  /*Mengatur isi Hasil Perhitungan*/
+  #result {
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 450px;
+    box-sizing: border-box;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  /*Styling teks penjelasan mengenai BMI*/
+  #bmiExplanation {
+    margin-top: 20px;
+    padding: 15px;
+  }
+
+  #bmiExplanation p { 
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-align: justify;
+  }
+  
+  /*Styling tabel kisaran BMI*/
+  table {
+    margin-top: 10px;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+  
+  table, th, td {
+    border: 1px solid #ccc;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  /*Mengatur URL Permenkes*/
+  a {
+    color:#5fb6f0;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  

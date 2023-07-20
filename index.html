@@ -1,0 +1,91 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator BMI</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+  <h1>Kalkulator BMI</h1>
+    <!-- Form untuk memasukkan data -->
+    <div class="container">  
+        <form id="bmiForm">
+          <!--Input data jenis kelamin dengan tipe radio-->
+          <div class="gender-container">
+            <label for="gender" class="bold-label">Jenis kelamin:</label>
+            <input type="radio" id="genderMale" class="gender-radio" name="gender" value="Laki-laki" required>
+            <label for="genderMale">Laki-laki</label>
+            <input type="radio" id="genderFemale" class="gender-radio" name="gender" value="Perempuan">
+            <label for="genderFemale">Perempuan</label>
+          </div>
+          
+          <!--Input data umur, tinggi badan, dan berat badan dengan tipe number-->
+          <label for="age" class="bold-label">Umur: </label> 
+          <input type="number" id="age" name="age" required><br> 
+           
+          <label for="height" class="bold-label">Tinggi badan (cm):</label>
+          <input type="number" id="height" name="height" required><br> 
+
+          <label for="weight" class="bold-label">Berat badan (kg):</label> 
+          <input type="number" id="weight" name="weight" required><br> 
+
+          <!--Tombol untuk menampilkan hasil Hitung BMI dan Reset-->
+          <div class="button-container">
+            <button type="button" onclick="calculateBMI()">Hitung BMI</button> <!-- Tombol submit Hitung BMI-->
+            <input type="reset" value="Reset"> <!-- Tombol Reset -->
+          </div> 
+        </form>
+        <br>
+        <!--Tempat enampilkan hasil Hitung BMI -->
+        <p> Hasil Perhitungan </p>
+        <div id="result"></div>
+      </div>
+
+      <!-- Penjelasan mengenai BMI -->
+      <div id="bmiExplanation">
+        <b>Apa itu BMI (Body Mass Index)?</b>
+        <p>Body Mass Index atau Index Massa Tubuh adalah ukuran tubuh seseorang apakah kurus atau gemuk berdasarkan tinggi dan berat badannya. </p>
+        <p>BMI banyak digunakan sebagai indikator apakah seseorang memiliki berat badan yang sehat untuk tinggi badannya. Nilai hasil perhitungan BMI akan digunakan untuk mengkategorikan apakah seseorang kurus, berat badan normal, berat badan berlebih, atau obesitas tergantung dari kisaran tertentu.</p> 
+        <p>Perlu diketahui bahwa BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh dan resiko penyakit seseorang. BMI dapat digunakan untuk menjadi indikator untuk mengetahui apakah diperlukan pemeriksaan lebih lanjut.</p>
+        <br>
+
+        <b>Rumus BMI</b>
+        <P>Untuk menghitung BMI, pertama ubah tinggi badan menjadi dalam satuan meter lalu kalikan dalam kuadrat. Lalu bagi berat badan dengan hasil kuadrat tinggi badan. Berikut adalah rumus untuk BMI:</P>
+        <P>BMI = Berat Badan (kg) / Tinggi Badan^2 (m)</p>
+        <p>Selanjutnya untuk mengetahui kategori berat badan untuk umur 19 keatas, dapat dilihat dari tabel kisaran BMI sebagai berikut:</p>
+        
+        <!-- Menampilkan tabel kisaran BMI -->
+        <table> 
+            <tr>
+                <th>BMI</th>
+                <th>Status Berat Badan</th>
+              </tr>
+              <tr>
+                <td>&lt; 18.5</td>
+                <td>Kekurangan Berat Badan (Kurus)</td>
+              </tr>
+              <tr>
+                <td>18.5 - 24.9</td>
+                <td>Normal (Ideal)</td>
+              </tr>
+              <tr>
+                <td>25 - 29.9</td>
+                <td>Kelebihan Berat Badan (Gemuk)</td>
+              </tr>
+              <tr>
+                <td>&ge; 30</td>
+                <td>Kegemukan (Obesitas)</td>
+              </tr>
+        </table>
+        <br>
+        <p>Khusus untuk anak umur di bawah 19, kisaran BMI berbeda-beda sesuai dengan umur anak karena anak masih dalam masa pertumbuhan. Untuk mengetahui kisaran kategori BMI umur di bawah 19 tahun dapat dilihat dari
+            <a href="http://hukor.kemkes.go.id/uploads/produk_hukum/PMK_No__2_Th_2020_ttg_Standar_Antropometri_Anak.pdf"> Permenkes Nomor 2 Tahun 2020 </a>
+            halaman 14. 
+        </p>
+      </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
